@@ -10,7 +10,7 @@
           branches: ["main", "dev"]
 
   jobs:
-      build:
+      build and run server:
           name: Backend test
           runs-on: ubuntu-latest
 
@@ -35,7 +35,8 @@
                 with:
                   mongodb-version: ${{ matrix.mongodb-version }}
               - run: npm install
-              - run: node server.js
+              - run: npm run dev &
               - run: npm test
+
 
 
