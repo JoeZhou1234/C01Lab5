@@ -10,7 +10,7 @@
           branches: ["main", "dev"]
 
   jobs:
-      build and run server:
+      build:
           name: Backend test
           runs-on: ubuntu-latest
 
