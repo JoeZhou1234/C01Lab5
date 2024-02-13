@@ -36,7 +36,10 @@
                   mongodb-version: ${{ matrix.mongodb-version }}
               - run: npm install
               - run: npm run dev &
+                env:
+                  CI: true
               - run: npm test
+
 
 
 
